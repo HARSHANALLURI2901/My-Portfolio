@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Harshavardhan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Raleway", sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .nav-link {
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-link:hover {
+      color: #ffffff !important;
+      background-color: #0d6efd !important;
+      animation: blink-highlight 0.6s alternate 2;
+      border-radius: 5px;
+    }
+    @keyframes blink-highlight {
+      0% { background-color: #0d6efd; color: white; }
+      50% { background-color: #0b5ed7; color: white; }
+      100% { background-color: #0d6efd; color: white; }
+    }
+    #education .card:hover {
+      background-color: grey;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .sidebar {
+      width: 300px;
+      position: fixed;
+      height: 100%;
+      background-color: #6FB1FC;
+      z-index: 3;
+      padding: 1rem;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+    .sidebar a {
+      color: white;
+    }
+    .sidebar a:hover {
+      color: #ffc107 !important;
+    }
+    .mobile-header {
+      display: none;
+      background: linear-gradient(to right, #0052D4, #4364F7, #6FB1FC);
+    }
+    @media (max-width: 991px) {
+      .sidebar {
+        display: none;
+      }
+      .mobile-header {
+        display: block;
+        background-color: #343a40;
+        border-bottom: 1px solid #ccc;
+        padding: 1rem;
+      }
+      .mobile-header .navbar-brand,
+      .mobile-header .nav-link {
+        color: white;
+      }
+      .mobile-header .nav-link:hover {
+        color: #ffc107 !important;
+      }
+    }
+    .main-content {
+      margin-left: 300px;
+      padding: 1rem;
+    }
+    @media (max-width: 991px) {
+      .main-content {
+        margin-left: 0;
+      }
+    }
+    .hover-opacity:hover {
+      opacity: 0.7;
+    }
+    .card-hover:hover {
+      background-color: #d3d3d3;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .btn-hover:hover {
+      background-color: #0d6efd !important;
+      color: white !important;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(45deg, #ff6b6b, #ff9472);
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      z-index: 999;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .back-to-top:hover {
+      transform: scale(1.1);
+      background: linear-gradient(45deg, #e84118, #f39c12);
+    }
+    #contact {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    @media (min-width: 992px) {
+      #contact {
+        margin-left: 300px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+<!-- Mobile Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none mobile-header">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="static/images/Harsha.jpg" class="rounded-circle border border-3 border-light" style="width: 50px; height: 50px; object-fit: cover;" />
+      <span class="ms-2">Harshavardhan</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mobileNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Navigation -->
+<div class="sidebar border-end d-none d-lg-block" id="sidebar">
+  <div class="text-center">
+    <img src="static/images/Harsha.jpg" 
+         class="rounded-circle border border-3 border-light" style="width:45%; object-fit: cover; aspect-ratio: 1 / 1;" /><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+    <p class="text-light">Developed by Harshavardhan</p>
+  </div>
+  <nav class="nav flex-column">
+    <a class="nav-link" href="#projects">PROJECTS</a>
+    <a class="nav-link" href="#education">EDUCATION</a>
+    <a class="nav-link" href="#about">ABOUT</a>
+    <a class="nav-link" href="#contact">CONTACT INFORMATION</a>
+  </nav>
+  <div class="mt-4 text-center">
+    <a href="https://www.instagram.com/_harsha_nalluri" target="_blank" class="text-light text-decoration-none">
+      <i class="fa fa-instagram me-3 hover-opacity"></i>
+    </a>
+    <a href="https://www.snapchat.com/add/harsha2924" target="_blank" class="text-light text-decoration-none">
+      <i class="fa fa-snapchat me-3 hover-opacity"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/harsha-nalluri-a48b09197/" target="_blank" class="text-light text-decoration-none">
+      <i class="fa fa-linkedin hover-opacity"></i>
+    </a>
+  </div>
+</div>
+
+<div class="main-content">
+  <header id="projects" class="p-4">
+    <h1><b>NALLURI HARSHAVARDHAN</b></h1>
+  </header>
+
+  <div class="container">
+    <h3><b>Projects</b></h3>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#healthModal">
+          <div class="card card-hover h-100 text-center">
+            <img src="static/images/health.jpg"  alt="Course Project" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+              <h5 class="card-title"><b>HEALTHCARE ANALYTICS GUI DESIGN</b></h5>
+              <p>Master's Major Project - Saint Louis University</p>
+            </div>
+          </div>
+        </a>
+      </div>
+<!-- Healthcare Canvas Modal -->
+<div class="modal fade" id="healthModal" tabindex="-1" aria-labelledby="healthModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="healthModalLabel">Healthcare Claims Data Analysis Dashboard</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #f4f6f8; padding: 0;">
+        <style>
+          .health-section {
+            background: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease-in-out;
+          }
+          .health-section:hover {
+            background-color: #e0e0e0;
+          }
+          .health-section img {
+            width: 70%;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+          }
+          .health-section p {
+            font-size: 16px;
+            color: #333;
+            padding: 0 10px;
+          }
+          @media (max-width: 768px) {
+            .health-section {
+              margin: 15px 10px;
+              padding: 15px;
+            }
+            .health-section img {
+              width: 100%;
+              margin: 10px 0;
+            }
+            .health-section p {
+              font-size: 15px;
+              padding: 0;
+            }
+          }
+        </style>
+
+        <section class="health-section">
+          <h2>USER IDENTIFICATION</h2>
+          <div class="content">
+            <img src="static/images/USER IDENTIFICATION.png" alt="User Identification">
+            <p><b>Primary Users:</b> Claim Managers – Analyze claims data effectively...<br>
+              <b>Secondary Users:</b> Healthcare Administrators...<br>
+              <b>Justification:</b> Focused on roles that require actionable insights.
+            </p>
+          </div>
+        </section>
+
+        <section class="health-section">
+          <h2>Provider Analysis Dashboard</h2>
+          <div class="content">
+            <img src="static/images/Provider Analysis Dashboard.jpg" alt="Provider Dashboard">
+            <p><b>Objective:</b> Evaluate provider performance...<br>
+              <b>Components:</b> Custom filters and visuals...<br>
+              <b>Visuals:</b> Line Charts, Tables, Heatmaps, Bar Charts.
+            </p>
+          </div>
+        </section>
+
+        <section class="health-section">
+          <h2>High-Cost Procedures Identification Dashboard</h2>
+          <div class="content">
+            <img src="static/images/High-Cost Procedures Identification Dashboard.jpg" alt="High-Cost Dashboard">
+            <p><b>Purpose:</b> Identify and manage high-cost procedures...<br>
+              <b>Core Components:</b> Filters and visuals...<br>
+              <b>Visuals:</b> Line Charts, Scatter Plots, Heatmaps, Bar Charts.
+            </p>
+          </div>
+        </section>
+
+        <section class="health-section">
+          <h2>Application Demonstration</h2>
+          <div class="content">
+            <img src="static/images/Application Demonstration1.jpg" alt="Demo 1">
+            <img src="static/images/Application Demonstration2.jpg" alt="Demo 2" style="margin-top: 10px;">
+            <p><b>Overview:</b> Showcases actual implementation...<br>
+              <b>Features:</b> Dynamic filtering, visual interactivity...<br>
+              <b>Use Case:</b> Supports data-driven decisions.
+            </p>
+          </div>
+        </section>
+
+        <footer class="text-center text-muted mb-4">
+          &copy; 2025 Harsha - Healthcare Data Insights
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-4">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#employeeModal" class="text-decoration-none text-dark">
+          <div class="card card-hover h-100 text-center">
+            <img src="static/images/employee.jpg"  alt="Course Project" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+            <div class="card-body">
+              <h5 class="card-title"><b>EMPLOYEE SATISFACTION ANALYSIS</b></h5>
+              <p>Applied Analytics Course Project - Saint Louis University</p>
+            </div>
+          </div>
+        </a>
+      </div>
+<!-- Employee Modal -->
+<div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="employeeModalLabel">Employee Satisfaction Analysis Dashboard</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #f4f6f8;">
+
+        <style>
+  .emp-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .emp-section:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+    background-color: #eaf1f7;
+    z-index: 2;
+  }
+
+  .emp-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #003366;
+    text-align: center;
+  }
+
+  .emp-text {
+    font-size: 1rem;
+    color: #444;
+    text-align: center;
+  }
+
+  .emp-img {
+    width: 100%;
+    max-width: 700px;
+    margin: 10px auto;
+    border-radius: 6px;
+    display: block;
+    border: 1px solid #ccc;
+  }
+
+  @media (max-width: 768px) {
+    .emp-title {
+      font-size: 1.1rem;
+    }
+
+    .emp-text {
+      font-size: 0.95rem;
+    }
+
+    .emp-img {
+      width: 100%;
+    }
+  }
+</style>
+
+        <section class="emp-section">
+          <h2 class="emp-title">Rating Dashboard</h2>
+          <img src="static/images/rating.png" alt="Rating Dashboard" class="emp-img" />
+          <p class="emp-text">➢ This provides a visual analysis of employee ratings across different departments, tracking overall satisfaction trends.</p>
+        </section>
+
+        <section class="emp-section">
+          <h2 class="emp-title">Performance Rating</h2>
+          <img src="static/images/prating.png" alt="Performance Rating" class="emp-img" />
+          <p class="emp-text">➢ This evaluates employee performance ratings in relation to their satisfaction levels, helping identify gaps or excellence zones.</p>
+        </section>
+
+        <section class="emp-section">
+          <h2 class="emp-title">Comparison Chart</h2>
+          <img src="static/images/Comparision.png" alt="Comparison Chart" class="emp-img" />
+          <p class="emp-text">➢ Compares satisfaction metrics over different algorithms used in the project on the basis of accuracy. We achieved the best accuracy using Random Forest Algorithm with 93%.</p>
+        </section>
+
+        <footer class="text-center text-muted mt-4 mb-4">
+          &copy; 2025 Harshavardhan - Employee Insights
+        </footer>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-4">
+  <a href="#" data-bs-toggle="modal" data-bs-target="#childbirthModal" class="text-decoration-none text-dark">
+    <div class="card card-hover h-100 text-center">
+      <img src="static/images/childbirth.jpg" alt="Bachelor's Major Project" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+      <div class="card-body">
+        <h5 class="card-title"><b>PREDICTING BEST SUITABLE MODE OF CHILDBIRTH</b></h5>
+        <p>Bachelor's Major Project - Dhanekula Institute of Engineering & Technology</p>
+      </div>
+    </div>
+  </a>
+</div>
+
+<!-- Childbirth Modal -->
+<div class="modal fade" id="childbirthModal" tabindex="-1" aria-labelledby="childbirthModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="childbirthModalLabel">Childbirth Prediction Dashboard</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #f4f6f8;">
+        <style>
+          .child-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+          }
+
+          .child-section:hover {
+            background-color: #eaf1f7;
+          }
+
+          .child-img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px auto;
+            border-radius: 6px;
+            display: block;
+            border: 1px solid #ccc;
+          }
+
+          .child-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #003366;
+            text-align: center;
+          }
+
+          .child-text {
+            font-size: 1rem;
+            color: #444;
+            text-align: center;
+          }
+
+          @media (max-width: 768px) {
+            .child-title {
+              font-size: 1.1rem;
+            }
+
+            .child-text {
+              font-size: 0.95rem;
+            }
+
+            .child-img {
+              width: 100%;
+            }
+          }
+        </style>
+
+        <section class="child-section">
+          <h2 class="child-title">Login Page</h2>
+          <img src="static/images/login.jpg" alt="Login Page" class="child-img" />
+          <p class="child-text">➢ User logs in to our website to predict the mode of childbirth.</p>
+        </section>
+
+        <section class="child-section">
+          <h2 class="child-title">Model Performance</h2>
+          <img src="static/images/score.jpg" alt="Model Performance" class="child-img" />
+          <p class="child-text">➢ Achieved accuracy of 87.5%. Metrics like precision, recall, F1-score are shown.</p>
+        </section>
+
+        <section class="child-section">
+          <h2 class="child-title">Prediction Dashboard</h2>
+          <img src="static/images/predict.jpg" alt="Prediction Dashboard" class="child-img" />
+          <p class="child-text">➢ Users input birth remarks, click Predict, and view predicted mode of birth.</p>
+        </section>
+
+        <section class="child-section">
+          <h2 class="child-title">Algorithm Accuracies</h2>
+          <img src="static/images/pie.jpg" alt="Pie Chart" class="child-img" />
+          <p class="child-text">➢ Accuracy of various algorithms shown via pie chart.</p>
+          <img src="static/images/line.jpg" alt="Line Chart" class="child-img" />
+          <p class="child-text">➢ Accuracy comparison using a line chart.</p>
+        </section>
+
+        <footer class="text-center text-muted mt-4 mb-4">
+          &copy; 2025 Harsha - Healthcare Data Insights
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="col-md-4">
+      <a href="#" data-bs-toggle="modal" data-bs-target="#tcsModal" class="text-decoration-none text-dark">
+        <div class="card card-hover h-100 text-center">
+          <img src="static/images/tcs.jpg"  alt="Course Project"
+               class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+          <div class="card-body">
+            <h5 class="card-title"><b>TCS REVENUE</b></h5>
+              <p>Enterprise Architecture Course Project - Saint Louis University</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    </div>
+  </div>
+<!-- TCS Revenue Project Modal -->
+<div class="modal fade" id="tcsModal" tabindex="-1" aria-labelledby="tcsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="tcsModalLabel">TCS Enterprise Architecture Dashboard</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #f4f6f8;">
+        
+        <style>
+          .tcs-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+
+          .tcs-section:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+            background-color: #eaf1f7;
+            z-index: 2;
+          }
+
+          .tcs-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #003366;
+            text-align: center;
+          }
+
+          .tcs-text {
+            font-size: 1rem;
+            color: #444;
+            text-align: center;
+          }
+
+          .tcs-img {
+            width: 100%;
+            max-width: 700px;
+            margin: 10px auto;
+            border-radius: 6px;
+            display: block;
+            border: 1px solid #ccc;
+          }
+
+          @media (max-width: 768px) {
+            .tcs-title {
+              font-size: 1.1rem;
+            }
+            .tcs-text {
+              font-size: 0.95rem;
+            }
+            .tcs-img {
+              width: 100%;
+            }
+          }
+        </style>
+
+        <!-- Google Sites Button -->
+        <section class="tcs-section text-center">
+          <h2 class="tcs-title">Explore Full Architecture Site</h2>
+          <p class="tcs-text">Detailed walkthrough hosted on Google Sites with structured visuals and frameworks.</p>
+          <a href="https://sites.google.com/slu.edu/tcs-company/home?authuser=0" target="_blank" class="btn btn-primary">Visit Google Site</a>
+        </section>
+
+        <!-- Sections (Add More as Needed) -->
+        <section class="tcs-section">
+          <h2 class="tcs-title">Business Model Canvas</h2>
+          <img src="static/images/1.jpg" alt="Business Model Canvas" class="tcs-img" />
+          <p class="tcs-text">➢ Core structure of TCS business including key activities, customer relationships, and revenue streams.</p>
+        </section>
+
+        <section class="tcs-section">
+          <h2 class="tcs-title">Timeline - In Progress</h2>
+          <img src="static/images/2.jpg" alt="In Progress Timeline" class="tcs-img" />
+          <p class="tcs-text">➢ Visual representation of current phases, deliverables, and milestones in the project timeline.</p>
+        </section>
+
+        <section class="tcs-section">
+          <h2 class="tcs-title">Timeline - All Tasks Completed</h2>
+          <img src="static/images/3.jpg" alt="Completed Tasks" class="tcs-img" />
+          <p class="tcs-text">➢ Completed project timeline with marked phases and finalized outcomes.</p>
+        </section>
+
+        <!-- You can continue adding more image sections as needed -->
+
+        <footer class="text-center text-muted mt-4 mb-4">
+          &copy; 2025 Harshavardhan - TCS Enterprise Architecture
+        </footer>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <h3 class="mt-5"><b>Work Experience</b></h3>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <img src="static/images/web.jpg"  alt="Web Development Intern" class="rounded-circle border border-3 border-dark mt-3" style="width: 30%; object-fit: cover; aspect-ratio: 1 / 1; display: block; margin: auto;" />
+        <div class="card-body">
+          <h5 class="card-title">Web Application Development</h5>
+          <p class="card-text">Company - INNOGEEKS TECHNOLOGIES, VJA, INDIA (Aug 2022 - Jan 2023)</p>
+          <p>Developed responsive web forms and interactive UIs using HTML, CSS, JavaScript, and jQuery. Integrated APIs with AJAX, JSON, and XML, and managed database connections via JDBC-ODBC. Used debugging tools for optimization and created technical documentation and design diagrams.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="education" class="section-grey mt-5">
+    <h3><b>Education</b></h3>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5 class="card-title mb-1"><b>Master of Science in Information Systems</b></h5>
+          <p class="mb-0">Saint Louis University, Missouri, USA</p>
+          <small class="text-muted">2023 - 2025</small>
+          <p>Score : 3.5/4.0 (GPA)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5 class="card-title mb-1"><b>Bachelor of Technology in CSE</b></h5>
+          <p class="mb-0">Dhanekula Institute of Engineering & Technology, Andhra Pradesh, India</p>
+          <small class="text-muted">2019 - 2023</small>
+          <p>Score : 7.2/10 (GPA)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5" id="about">
+    <h4><b>About Me</b></h4>
+    <p>Detail-oriented and analytical Master’s student in Information Systems with a strong academic foundation and hands-on technical experience. Seeking an entry-level Data Analyst role to apply skills in data analysis, visualization, and reporting using tools like Power BI, Python, and SQL to support business intelligence and insights.</p>
+    <hr />
+    <h4><b>Technical Skills</b></h4>
+    <p><strong>Data Analytics & Visualization:</strong> Power BI, Tableau, Excel (Pivot Tables, VLOOKUP), Google Data Studio</p>
+    <p><strong>Programming Languages:</strong> Python (Pandas, NumPy, Matplotlib), R (basic statistical analysis, data visualization)</p>
+    <p><strong>Databases & Querying:</strong> SQL, MySQL, PostgreSQL, JDBC-ODBC</p>
+    <p><strong>Technical Expertise:</strong> Proficient in HTML5, CSS3, and JavaScript with knowledge of frameworks and libraries such as Bootstrap, AngularJS, and jQuery.</p>
+    <a href="https://drive.google.com/uc?export=download&id=1xoLXccaB77zOulE_d9tbo0d0WDBUpcsO" target="_blank" rel="noopener">
+      <button class="btn btn-dark btn-hover my-3">
+        <i class="fa fa-download me-2"></i>Download Resume
+      </button>
+    </a>
+    <hr />
+  </div>
+
+  <div class="bg-secondary text-white p-4" id="contact-info">
+    <h4 class="mb-4"><b>Contact Information</b></h4>
+    <div class="row text-center">
+      <div class="col-md-4 mb-3">
+        <div class="p-3 bg-dark rounded shadow-sm h-100">
+          <i class="fa fa-envelope fa-2x mb-2"></i>
+          <h5>Email</h5>
+          <a href="mailto:harshanalluri29@gmail.com" class="text-white text-decoration-none">harshanalluri29@gmail.com</a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <a href="tel:+13142810956" class="p-3 bg-dark rounded shadow-sm h-100 d-block text-white text-decoration-none">
+          <i class="fa fa-phone fa-2x mb-2"></i>
+          <h5>Phone</h5>
+          <p>+1 3142810956</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-3 bg-dark rounded shadow-sm h-100">
+          <i class="fa fa-map-marker fa-2x mb-2"></i>
+          <h5>Address</h5>
+          <a href="https://www.google.com/maps/place/12664+Mateus+Dr,+St.+Louis,+MO+63146/" target="_blank" class="text-white text-decoration-none">
+            Saint Louis, Missouri, US
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Me Section -->
+<section id="contact" class="container mt-5">
+  <h3><b>Contact Me</b></h3>
+  <form action="https://formsubmit.co/ajax/harshanalluri29@gmail.com" method="POST" id="contact-form">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="/">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
+</section>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop">
+  <i class="fa fa-angle-double-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const backToTopButton = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  document.querySelector("form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const url = form.action;
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        // Show success toast
+        showSuccessToast();
+
+        // Clear form fields
+        form.reset();
+      } else {
+        alert("There was an error sending the message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Network error. Please try again later.");
+    }
+  });
+
+  function showSuccessToast() {
+    const toast = document.createElement("div");
+    toast.innerText = "Message sent successfully!";
+    toast.style.position = "fixed";
+    toast.style.bottom = "20px";
+    toast.style.right = "20px";
+    toast.style.backgroundColor = "#28a745";
+    toast.style.color = "#fff";
+    toast.style.padding = "15px 20px";
+    toast.style.borderRadius = "8px";
+    toast.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+    toast.style.zIndex = 9999;
+    toast.style.fontWeight = "bold";
+    toast.style.fontSize = "16px";
+    toast.style.transition = "opacity 0.3s ease";
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+      toast.style.opacity = 0;
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
