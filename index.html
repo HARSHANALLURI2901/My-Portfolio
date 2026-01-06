@@ -10,6 +10,8 @@
   <style>
     body, h1, h2, h3, h4, h5, h6 {
       font-family: "Raleway", sans-serif;
+      overflow-x: hidden;
+      width: 100%;
     }
     html {
       scroll-behavior: smooth;
@@ -75,10 +77,13 @@
     .main-content {
       margin-left: 300px;
       padding: 1rem;
+      max-width: calc(100% - 300px);
     }
     @media (max-width: 991px) {
       .main-content {
         margin-left: 0;
+        max-width: 100%;
+          padding: 1rem;
       }
     }
     .hover-opacity:hover {
@@ -113,6 +118,7 @@
       background: linear-gradient(45deg, #e84118, #f39c12);
     }
     #contact {
+      margin-left: 0 !important;
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -826,6 +832,7 @@
 
 </body>
 </html>
+
 
 
 
